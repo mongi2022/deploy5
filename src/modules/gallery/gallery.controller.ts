@@ -61,11 +61,11 @@ export class GalleryController{
       
         var url = '/home/tpc/Bureau/PROJET_TEST/NODEJS/real-estate-front/real-estate-front/src/assets/images'
         if(s[0]==1366) {
-          var dir=`/${id}`
+          var dir=`${url}/${id}`
           if (!fs.existsSync(dir)){
             fs.mkdirSync(dir, { recursive: true });
         }
-        let originalname=Buffer.from(file.originalname, 'latin1').toString('utf8');
+        let originalname=(file.originalname);
 
           filename=`${url}/${id}/big-${s[0]}-${originalname}`
        
@@ -75,7 +75,7 @@ export class GalleryController{
           if (!fs.existsSync(dir)){
             fs.mkdirSync(dir, { recursive: true });
         }
-        let originalname=Buffer.from(file.originalname, 'latin1').toString('utf8');
+        let originalname=(file.originalname);
 
           filename=`${url}/${id}/medium-${s[0]}-${originalname}`
    
@@ -85,7 +85,7 @@ export class GalleryController{
           if (!fs.existsSync(dir)){
             fs.mkdirSync(dir, { recursive: true });
         }
-        let originalname=Buffer.from(file.originalname, 'latin1').toString('utf8');
+        let originalname=(file.originalname);
 
           filename=`${url}/${id}/small-${s[0]}-${originalname}`
      
